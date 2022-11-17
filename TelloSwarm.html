@@ -28,6 +28,15 @@
 
       <h2 style="font-family: fantasy; border-width:4xp; border-style:solid; border-color: gainsboro; padding: lem: ">Connecting Multiple Drones</h2>
       <img src="https://forum33.djicdn.com/data/attachment/forum/201906/09/234701l3qqobc4wzkt6ltl.jpg" alt="Image Used">
+
+<h4 style="font-family: fantasy; border-width:4xp; border-style:solid; border-color: gainsboro; padding: lem: ">Using a Hotspot</h4>
+<p style="font-family: fantasy; border-width:4xp; border-style:solid; border-color: gainsboro; padding: lem: ">Start by connecting to the individual drone with the computer being used. Then run the following python code to switch the drone to the alternate mode.</p>
+<code>from dhitellopy import Tello </br>
+    tello = Tello() </br>
+    tello.connect() </br>
+    tello.conntect_to_wifi('[Insert Wifi Name/SSID]', '[Insert Wifi Password}') </br>
+</code>
+
 <h3 style="font-family: fantasy; border-width:4xp; border-style:solid; border-color: gainsboro; padding: lem: ">Cites Used</h3>
       <a href="https://github.com/damiafuentes/DJITelloPy/blob/master/djitellopy/tello.py">DJITelloPy</a>
 
