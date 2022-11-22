@@ -38,7 +38,24 @@
     tello.connect() </br>
     tello.conntect_to_wifi('[Insert Wifi Name/SSID]', '[Insert Wifi Password}') </br>
 </code>
-
+<p>After the drones LED goes dark, it should light up and cycle through all the colors before flashing yellow. At this point, you need to get the IP adress of the Tello. We used the app "Fling" to see IP adresses connected to the network, and turned the Tello on and off to see what IP adress it was. After you have the IP address, you can put it in a list on the TelloSwarm.py program. </p>
+<code>
+    from djitellopy import TelloSwarm </br>
+</br>
+swarm = TelloSwarm.fromIps([ </br>
+</br>
+    "192.168.53.192",</br>
+    "192.168.53.124",</br>
+    "192.168.53.85"</br>
+</br>
+])</br>
+</br>
+swarm.connect()</br>
+swarm.takeoff()</br>
+</br>
+swarm.land()</br>
+swarm.end()</br>
+</code>
 
 
 <h3 style="font-family: fantasy; border-width:4xp; border-style:solid; border-color: gainsboro; padding: lem: ">Cites Used</h3>
