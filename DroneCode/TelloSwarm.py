@@ -2,9 +2,9 @@ from djitellopy import TelloSwarm
 
 swarm = TelloSwarm.fromIps([
     
-    "192.168.53.192",
-    "192.168.53.124",
-    "192.168.53.85"
+    "Insert IP 1",
+    "Insert IP 2",
+    "Insert IP 3"
     
 ])
 
