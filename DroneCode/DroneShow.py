@@ -2,7 +2,7 @@ from djitellopy import TelloSwarm
 
 swarm = TelloSwarm.fromIps([
     
-    "Insert IP 1",
+    "Insert IP 1", lol
     "Insert IP 2",
     "Insert IP 3",
     "Insert IP 4"
