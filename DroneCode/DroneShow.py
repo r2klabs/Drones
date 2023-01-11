@@ -1,21 +1,50 @@
 from djitellopy import TelloSwarm
 
-swarm = TelloSwarm.fromIps([
+#swarm = TelloSwarm.fromIps([
     
-    "Insert IP 1",
-    "Insert IP 2",
-    "Insert IP 3",
-    "Insert IP 4"
+ #   "192.168.194.85",
+  #  "192.168.194.124",
+   # "192.168.194.208"
+  
     
+#])
+
+one = TelloSwarm.fromIps([
+    "192.168.194.85",
+    "192.168.194.119"
+])
+
+two = TelloSwarm.fromIps([
+    "192.168.194.124"#,
+    #"192.168.194.105"
+])
+
+three = TelloSwarm.fromIps([
+    "192.168.194.85",
+    "192.168.194.119",
+    "192.168.194.124"#,
 ])
 
 
-swarm.connect()
-swarm.takeoff()
+one.connect()
+two.connect()
+#one.takeoff()
+#two.takeoff()
+three.connect()
+three.takeoff()
+#swarm.connect()
+#swarm.takeoff()
 
-swarm.parrallel(lambda i, tello: tello.move(up, 20))
-swarm.parrallel(lambda i, tello: tello.move(down, 20))
+one.flip("f")
+two.flip("b")
+two.move_up(60)
+three.land()
+#one.land()
+#two.land()
+#one.end()
+#two.end()
+three.end()
 
 
-swarm.land()
-swarm.end()
+#swarm.land()
+#swarm.end()
