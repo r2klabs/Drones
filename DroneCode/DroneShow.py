@@ -1,57 +1,72 @@
 from djitellopy import TelloSwarm
 
-#swarm = TelloSwarm.fromIps([
-    
-<<<<<<< HEAD
- #   "192.168.194.85",
-  #  "192.168.194.124",
-   # "192.168.194.208"
-  
-=======
-    "Insert IP 1", lol
-    "Insert IP 2",
-    "Insert IP 3",
-    "Insert IP 4"
->>>>>>> 1318911d44f6385c074069e93aade258c072f41b
-    
-#])
-
-one = TelloSwarm.fromIps([
+twos = TelloSwarm.fromIps([
     "192.168.194.85",
     "192.168.194.119"
+    
+##Drones one and two are in this group
 ])
 
-two = TelloSwarm.fromIps([
+ones = TelloSwarm.fromIps([
     "192.168.194.124"#,
     #"192.168.194.105"
+    
+## Drone three is in this group
 ])
 
-three = TelloSwarm.fromIps([
+threes = TelloSwarm.fromIps([\
     "192.168.194.85",
     "192.168.194.119",
     "192.168.194.124"#,
 ])
 
 
+one = TelloSwarm.fromIps([
+    "192.168.194.85"
+])
+
+
+two = TelloSwarm.fromIps([
+    "192.168.194.119"
+])
+
+
+three = TelloSwarm.fromIps([
+    "192.168.194.124"
+])
+
+
+## Setup:
+## Drone 1, Drone 3, Drone 2
+
+
+##Drones Connection
+ones.connect()
+twos.connect()
+threes.connect()
 one.connect()
 two.connect()
-#one.takeoff()
-#two.takeoff()
 three.connect()
-three.takeoff()
-#swarm.connect()
-#swarm.takeoff()
 
-one.flip("f")
-two.flip("b")
-two.move_up(60)
-three.land()
-#one.land()
-#two.land()
-#one.end()
-#two.end()
-three.end()
+##Takeoff (In unison)
+threes.takeoff()
+
+##Preformance act one
+ones.flip("f")
+twos.flip("b")
 
 
-#swarm.land()
-#swarm.end()
+one.move_up(100)
+three.move_up(50)
+one.move_right(200)
+two.move_left(200)
+one.move_down(50)
+two.move_up(50)
+threes.move_down(25)
+
+##Current Drone Positions (2, 3, 1)
+
+##Landing/Ending Sequence
+threes.land()
+threes.end()
+
