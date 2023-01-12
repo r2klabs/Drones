@@ -65,6 +65,9 @@ two.move_up(50)
 threes.move_down(25)
 
 ##Current Drone Positions (2, 3, 1)
+threes.flip("f")
+threes.flip("b")
+
 
 ##Landing/Ending Sequence
 threes.land()
